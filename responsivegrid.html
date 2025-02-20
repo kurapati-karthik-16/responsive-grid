@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Grid layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .container {
+            min-width: 100vw;
+            min-height: 100vh;
+            background-color: rgb(17, 17, 84);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: 200px 100px 300px 200px 100px 100px 200px;
+            grid-template-rows: 200px 200px 200px;
+
+        }
+
+
+
+        .box {
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+        }
+
+        .box1 {
+            grid-area: 1/1/2/3;
+            background: #000046;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #1CB5E0, #000046);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 10px black;
+        }
+
+        .box2 {
+            grid-area: 1/3/2/6;
+            background-image: linear-gradient(to right, #fc4a1a, #f7b733);
+            text-shadow: 0 0 10px black;
+            border-left: 3px solid #f7b733;
+            border-bottom: 3px solid #f7b733;
+        }
+
+        .box3 {
+            grid-area: 1/6/2/8;
+            background: #000046;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #1CB5E0, #000046);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 10px black;
+        }
+
+        .box4 {
+            grid-area: 2/1/3/4;
+            background: #FF512F;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F09819, #FF512F);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            text-shadow: 0 0 10px black;
+
+
+
+        }
+
+        .box5 {
+            grid-area: 2/4/3/8;
+            background: #2193b0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            text-shadow: 0 0 10px black;
+        }
+
+        .box6 {
+            grid-area: 3/1/4/2;
+            background-image: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 10px black;
+            border-left: 3px solid #2a5298;
+            border-bottom: 3px solid #2a5298;
+
+        }
+
+        .box7 {
+            grid-area: 3/2/4/5;
+            background-image: linear-gradient(to right, #0b486b, #f56217);
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 10px black;
+            border-left: 3px solid #f56217;
+            border-bottom: 3px solid #f56217;
+
+        }
+
+        .box8 {
+            grid-area: 3/5/4/7;
+            background: #ff00cc;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #333399, #ff00cc);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 10px black;
+            align-items: center;
+            justify-content: center;
+            border-left: 3px solid #ff00cc;
+            border-bottom: 3px solid #ff00cc;
+
+        }
+
+        .box9 {
+            grid-area: 3/7/4/8;
+            background: #ff00cc;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #333399, #ff00cc);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 10px black;
+            border-left: 3px solid #ff00cc;
+            border-bottom: 3px solid #ff00cc;
+
+
+
+        }
+
+        .match {
+            position: relative;
+            left: 7px;
+
+        }
+
+        .i1 {
+            color: white;
+            width: 200px;
+            margin-left: 150px;
+            margin-bottom: 15px;
+            font-size: 50px;
+        }
+
+        .i2 {
+            color: white;
+            width: 200px;
+            margin-left: 175px;
+            margin-bottom: 15px;
+            font-size: 50px;
+        }
+
+        .i3 {
+            color: white;
+            width: 200px;
+            margin-left: 175px;
+            margin-bottom: 15px;
+            font-size: 50px;
+        }
+
+        .rcbpic {
+            width: 40%;
+            height: 100%;
+
+
+        }
+
+        .sunpic {
+            width: 40%;
+            height: 100%;
+
+        }
+
+        .bbb2 {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .csk {
+            width: 40%;
+            height: 100%;
+        }
+
+        .if {
+            margin: 10px;
+
+        }
+
+        .f {
+            font-size: 20px;
+
+        }
+
+        .btn2 {
+            /* padding: 5px; */
+            width: 70px;
+            height: 25px;
+            color: #2193b0;
+            border-radius: 5px;
+
+        }
+
+        .btn1 {
+
+            /* padding: 5px; */
+            width: 80px;
+            height: 25px;
+            color: #FF512F;
+            border-radius: 5px;
+
+        }
+
+        .text-box {
+
+            text-align: left;
+            gap: 40px;
+
+
+        }
+
+        .matchicon {
+            position: relative;
+            right: 7px;
+        }
+
+        .value {
+            font-size: 25px;
+            margin-left: 10px;
+
+        }
+
+        .textrcb {
+            text-align: left;
+            margin-left: 40px;
+        }
+
+        .textrcb1 {
+            margin-left: 10px;
+
+        }
+
+        .quote {
+            font-size: 25px;
+        }
+
+        @media(max-width:1100px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                overflow: scroll;
+            }
+
+            .boxes {
+                grid-template-columns: 300px 150px 150px 150px 150px ;
+                grid-template-rows: 200px 600px 200px;
+            }
+
+            .box1 {
+                grid-area: 1/1/2/2;
+              
+            }
+
+            .box2 {
+                grid-area: 1/2/2/4;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .chennalogo {
+                width: 100px;
+                height: auto;
+                padding-right: 10px;
+            }
+
+            .box3 {
+                grid-area: 1/4/2/6;
+                font-size: 20px;
+            }
+
+            .box4 {
+                grid-area: 2/1/3/3;
+                
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+                
+                
+            }
+            .rcbpic{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+            .virat{
+                width: 350px;
+                height: auto;
+            
+            }
+        .virattxt{
+            padding-bottom: 15px;
+            text-align: center;
+
+        }
+        
+
+            .box5 {
+                grid-area: 2/3/3/6;
+                display: flex;
+                flex-direction: column;
+                
+            }
+      
+            .cummins{
+                width: 400px;
+                height: 410px;
+                margin-bottom: 10px;
+            }
+            .suntxt{
+                font-size: 15px;
+                margin-top: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+                
+            }
+
+            .box6 {
+                grid-area: 3/1/4/2;
+            }
+
+            .box7 {
+                grid-area: 3/2/4/4;
+            }
+            .box7 p{
+                font-size: 12px;
+                padding: 10px;
+            }
+            .box8 {
+                grid-area: 3/4/4/5;
+            }
+
+            .box9 {
+                grid-area: 3/5/4/6;
+            }
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class=" box box1">
+                <h1>1260</h1>
+                <p>Sixes</p>
+            </div>
+            <div class=" box box2">
+                <div class="bbb2">
+                    <p>Winners</p>
+                    <p>CHENNAI SUPER KINGS</p>
+                </div>
+                <div class="csk">
+                    <img class="chennalogo" src="images/Chennai_Super_Kings_Logo.svg.png" height="100%" alt="">
+                </div>
+
+            </div>
+            <div class=" box box3">
+                <h1>14</h1>
+                <p>Hundreds</p>
+            </div>
+            <div class=" box box4">
+                <div class="rcbpic">
+                    <img class="virat" src="images/virat-removebg-preview.png" height="100%" alt="">
+                </div>
+                <div class="virattxt">
+                    <button class="btn1">Orange cap</button>
+
+                    <h1>Virat Kohli<br></h1>
+                    <div class="text-box">
+                        <p>Total Runs <span class="textrcb">741</span> </p>
+                        <p>Strike Rate <span class="textrcb">154.7</span></p>
+                        <p>Matches Played <span class="textrcb1">15</span></p>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="box box5">
+               
+                    <img class="cummins" src="images/33.png.avif" height="100%" alt="">
+                
+                <div class="suntxt">
+                    <button class="btn2">Fair play</button>
+                    <h1>Sunrisers Hyderabad</h1>
+                    <p>points<span class="value"> 173</span> </p>
+                </div>
+            </div>
+            <div class="box box6">
+                <div class="i1">
+                    <i class="fa-solid fa-image " height="100%"></i>
+                </div>
+                <h4>Pics</h4>
+            </div>
+            <div class="box box7">
+                <h1 class="if">Interesting Facts</h1>
+                <p><span class="quote">"</span>Kolkata Knight Riders crowned chanpinons for the third time,<br> having
+                    previously won in 2012,2014 <span class="quote">"</span> </p>
+            </div>
+            <div class="box box8">
+                <div class="i2">
+                    <i class="fa-solid fa-clipboard-list matchicon"></i>
+                </div>
+
+                <p class="match">Match Reports</p>
+
+
+            </div>
+            <div class="box box9">
+                <div class="i3">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <p>Highlights</p>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
